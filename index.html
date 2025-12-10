@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife Danger Carousel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="">Home</a>
+            
+        </nav>
+        <div class="search-container">
+            <input type="text" class="search-box" placeholder="Search animals..." id="searchBox">
+            <button class="search-btn" id="searchBtn">Search</button>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </header>
+
+    <div class="carousel">
+        <div class="list">
+            <!-- 14 Animals Total -->
+            <div class="item active" data-danger="60" data-name="Wolves">
+                <img src="image/wolf.jpg">
+                <div class="content">
+                    <div class="author">WILDLIFE</div>
+                    <div class="title">WOLVES</div>
+                    <div class="topic">DANGER</div>
+                    <div class="des" style="font-size: 20px;">
+                        Wolves use coordinated pack strategies to hunt. Their teamwork, endurance, and communication make them dangerous when protecting their territory.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item" data-danger="82" data-name="Saltwater Crocodile">
+                <img src="image/saltwater.jpg">
+                <div class="content">
+                    <div class="author">WILDLIFE</div>
+                    <div class="title">SALTWATER CROC</div>
+                    <div class="topic">DANGER</div>
+                    <div class="des"style="font-size: 20px;">
+                        Basking in the sun with mouth agape, this ancient reptile demonstrates its territorial behavior. The powerful body and aggressive posture signal high danger levels for anyone who ventures too close.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item" data-danger="100" data-name="Mosquito">
+                <img src="image/mosquito.jpg">
+                <div class="content">
+                    <div class="author">WILDLIFE</div>
+                    <div class="title">MOSQUITO</div>
+                    <div class="topic">DANGER</div>
+                    <div class="des"style="font-size: 20px;">
+                       The smallest but deadliest animal on Earth. Mosquitoes spread malaria, dengue, and many deadly diseases, killing millions of people every year.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item" data-danger="40" data-name="Dogs">
+                <img src="image/dogs.jpg">
+                <div class="content">
+                    <div class="author">WILDLIFE</div>
+                    <div class="title">DOG</div>
+                    <div class="topic">DANGER</div>
+                    <div class="des"style="font-size: 20px;">
+                        With mouth open wide revealing rows of conical teeth, this crocodile presents a threatening display. The detailed scales and powerful jaw structure showcase nature's perfect predator design.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item" data-danger="95" data-name="Great White Shark">
+                <img src="image/shark.jpg">
+                <div class="content">
+                    <div class="author">WILDLIFE</div>
+                    <div class="title">GREAT WHITE</div>
+                    <div class="topic">DANGER</div>
+                    <div class="des"style="font-size: 20px;">
+                        The apex predator of the ocean, this magnificent creature glides through deep waters with unmatched power. Its rows of serrated teeth and incredible speed make it one of nature's most efficient hunters.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item" data-danger="88" data-name="Bengal Tiger">
+                <img src="image/tiger.jpg">
+                <div class="content">
+                    <div class="author">WILDLIFE</div>
+                    <div class="title">BENGAL TIGER</div>
+                    <div class="topic">DANGER</div>
+                    <div class="des"style="font-size: 20px;">
+                        Striped majesty prowls through dense jungle foliage. This magnificent big cat possesses incredible strength and stealth, capable of taking down prey many times its size with calculated precision.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item" data-danger="92" data-name="African Lion">
+                <img src="image/lion.jpg">
+                <div class="content">
+                    <div class="author">WILDLIFE</div>
+                    <div class="title">AFRICAN LION</div>
+                    <div class="topic">DANGER</div>
+                    <div class="des"style="font-size: 20px;">
+                        The king of beasts surveys its domain with commanding presence. With powerful jaws and cooperative hunting strategies, this apex predator rules the savanna with unmatched authority and ferocity.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item" data-danger="85" data-name="Grizzly Bear">
+                <img src="image/bear.jpg">
+                <div class="content">
+                    <div class="author">WILDLIFE</div>
+                    <div class="title">GRIZZLY BEAR</div>
+                    <div class="topic">DANGER</div>
+                    <div class="des"style="font-size: 20px;">
+                        Massive and powerful, this North American giant commands respect throughout its territory. With immense strength and surprising speed, it stands as one of the continent's most formidable predators.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item" data-danger="75" data-name="Komodo Dragon">
+                <img src="image/comodo drgaon.jpg">
+                <div class="content">
+                    <div class="author">WILDLIFE</div>
+                    <div class="title">KOMODO DRAGON</div>
+                    <div class="topic">DANGER</div>
+                    <div class="des"style="font-size: 20px;">
+                        The world's largest lizard stalks its island domain with prehistoric presence. Its venomous bite and powerful build make this ancient reptile a formidable and dangerous predator.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item" data-danger="65" data-name="King Cobra">
+                <img src="image/cobra.jpg">
+                <div class="content">
+                    <div class="author">WILDLIFE</div>
+                    <div class="title">KING COBRA</div>
+                    <div class="topic">DANGER</div>
+                    <div class="des"style="font-size: 20px;">
+                        The world's longest venomous snake rises with its iconic hood displayed. One bite delivers enough neurotoxin to kill an elephant, making this serpent highly respected and feared.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item" data-danger="80" data-name="African Elephant">
+                <img src="image/elephant.jpg">
+                <div class="content">
+                    <div class="author">WILDLIFE</div>
+                    <div class="title">AFRICAN ELEPHANT</div>
+                    <div class="topic">DANGER</div>
+                    <div class="des"style="font-size: 20px;">
+                        Earth's largest land mammal displays its massive tusks and incredible strength. Despite being herbivorous, an angry elephant is extremely dangerous, capable of devastating force when threatened.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item" data-danger="70" data-name="Cape Buffalo">
+                <img src="image/buffalo.jpg">
+                <div class="content">
+                    <div class="author">WILDLIFE</div>
+                    <div class="title">CAPE BUFFALO</div>
+                    <div class="topic">DANGER</div>
+                    <div class="des"style="font-size: 20px;">
+                        Known as "Black Death" in Africa, this unpredictable bovine has massive horns and aggressive temperament. Responsible for more hunter deaths than any other African animal.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item" data-danger="93" data-name="Box Jellyfish">
+                <img src="image/jellyfish.jpg">
+                <div class="content">
+                    <div class="author">WILDLIFE</div>
+                    <div class="title">BOX JELLYFISH</div>
+                    <div class="topic">DANGER</div>
+                    <div class="des"style="font-size: 20px;">
+                        Nearly invisible and extraordinarily lethal, this marine creature drifts through tropical waters. Its venom is among the deadliest in the world, capable of killing a human within minutes.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item" data-danger="68" data-name="Polar Bear">
+                <img src="image/polar bear.jpg">
+                <div class="content">
+                    <div class="author">WILDLIFE</div>
+                    <div class="title">POLAR BEAR</div>
+                    <div class="topic">DANGER</div>
+                    <div class="des"style="font-size: 20px;">
+                        Arctic's apex predator roams the frozen tundra with incredible endurance. The largest land carnivore, it possesses immense power and will actively hunt humans if hungry.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="thumbnail">
+            <div class="item" data-index="0">
+                <img src="image/wolf.jpg">
+                <div class="content">
+                    <div class="title">WOLVES</div>
+                    <div class="description">Moderate</div>
+                </div>
+            </div>
+            <div class="item" data-index="1">
+                <img src="image/mosquito.jpg">
+                <div class="content">
+                    <div class="title">Saltwater Croc</div>
+                    <div class="description">High Danger</div>
+                </div>
+            </div>
+            <div class="item" data-index="2">
+                <img src="https://images.unsplash.com/photo-1623409328942-03b38a132b4c?w=300&h=400&fit=crop">
+                <div class="content">
+                    <div class="title">Mosquito</div>
+                    <div class="description">Extreme</div>
+                </div>
+            </div>
+            <div class="item" data-index="3">
+                <img src="image/dogs.jpg">
+                <div class="content">
+                    <div class="title">DOG</div>
+                    <div class="description">Moderate Risk</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+
+        <div class="time"></div>
+
+        <div class="danger-meter">
+            <div class="danger-label">DANGER</div>
+            <div class="danger-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="danger-percentage" id="dangerPercent">0%</div>
+                <div class="danger-text" id="dangerText">SAFE</div>
+            </div>
+        </div>
+    </div>
+
+ <script src="app.js"></script>
+</body>
+</html>

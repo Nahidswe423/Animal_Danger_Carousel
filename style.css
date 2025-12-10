@@ -1,0 +1,390 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000;
+            color: #eee;
+            font-family: Poppins, sans-serif;
+            font-size: 12px;
+            overflow-x: hidden;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        header {
+            width: 1140px;
+            max-width: 80%;
+            margin: auto;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 100;
+        }
+        
+        header nav a {
+            color: #eee;
+            margin-right: 40px;
+        }
+        
+        .search-container {
+            position: relative;
+            width: 350px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .search-box {
+            flex: 1;
+            padding: 10px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            color: #fff;
+            font-family: Poppins;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        
+        .search-btn {
+            padding: 10px 25px;
+            background: #f1683a;
+            border: none;
+            border-radius: 25px;
+            color: #fff;
+            font-family: Poppins;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+        
+        .search-btn:hover {
+            background: #ff8c5a;
+            transform: scale(1.05);
+        }
+        
+        .search-box:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #f1683a;
+        }
+        
+        .search-box::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .search-results {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.95);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            max-height: 300px;
+            overflow-y: auto;
+            display: none;
+            z-index: 1000;
+        }
+        
+        .search-result-item {
+            padding: 12px 15px;
+            color: #fff;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .search-result-item:hover {
+            background: rgba(241, 104, 58, 0.3);
+            padding-left: 20px;
+        }
+        
+        .search-result-item:last-child {
+            border-bottom: none;
+        }
+        
+        .carousel {
+            height: 100vh;
+            margin-top: -50px;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .carousel .list .item {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            inset: 0 0 0 0;
+            display: none;
+        }
+        
+        .carousel .list .item.active {
+            display: block;
+        }
+        
+        .carousel .list .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .carousel .list .item .content {
+            position: absolute;
+            top: 20%;
+            width: 1140px;
+            max-width: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding-right: 30%;
+            box-sizing: border-box;
+            color: #fff;
+            text-shadow: 0 5px 10px #0004;
+            
+        }
+        .carousel.list.item.content.des{
+            font-size: 500px;
+        }
+        .carousel .list .item .author {
+            font-weight: bold;
+            letter-spacing: 10px;
+        }
+        
+        .carousel .list .item .title,
+        .carousel .list .item .topic {
+            font-size: 5em;
+            font-weight: bold;
+            line-height: 1.3em;
+        }
+        
+        .carousel .list .item .topic {
+            color: #f1683a;
+        }
+        
+        .thumbnail {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            width: max-content;
+            z-index: 100;
+            display: flex;
+            gap: 20px;
+        }
+        
+        .thumbnail .item {
+            width: 150px;
+            height: 220px;
+            flex-shrink: 0;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .thumbnail .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        
+        .thumbnail .item .content {
+            color: #fff;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+        }
+        
+        .thumbnail .item .content .title {
+            font-weight: 500;
+        }
+        
+        .thumbnail .item .content .description {
+            font-weight: 300;
+        }
+        
+        .arrows {
+            position: absolute;
+            top: 80%;
+            right: 52%;
+            z-index: 100;
+            width: 300px;
+            max-width: 30%;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .arrows button {
+            width: 40px;
+            height: 40px;
+            border-radius: 20%;
+            background-color: #eee4;
+            border: none;
+            color: #fff;
+            font-family: monospace;
+            font-weight: bold;
+            transition: .5s;
+            cursor: pointer;
+        }
+        
+        .arrows button:hover {
+            background-color: #fff;
+            color: #000;
+        }
+        
+        .danger-meter {
+            position: absolute;
+            right: 50px;
+            top: 35%;
+            transform: translateY(-50%);
+            z-index: 101;
+            width: 80px;
+        }
+        
+        .danger-label {
+            color: #fff;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-align: center;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        
+        .danger-container {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 15px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .progress-bar {
+            width: 50px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        
+        .progress-fill {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 0%;
+            transition: height 1s ease-out, background 1s ease-out;
+            border-radius: 25px;
+        }
+        
+        .danger-percentage {
+            color: #fff;
+            font-weight: 700;
+            font-size: 24px;
+            text-align: center;
+            margin-top: 10px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        
+        .danger-text {
+            color: #fff;
+            font-size: 10px;
+            text-align: center;
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+        
+        .carousel .list .item.active {
+            z-index: 1;
+        }
+        
+        .carousel .list .item.active .content .author,
+        .carousel .list .item.active .content .title,
+        .carousel .list .item.active .content .topic,
+        .carousel .list .item.active .content .des
+        {
+            transform: translateY(50px);
+            filter: blur(20px);
+            opacity: 0;
+            animation: showContent .5s 0.5s linear 1 forwards;
+        }
+        
+        @keyframes showContent {
+            to {
+                transform: translateY(0px);
+                filter: blur(0px);
+                opacity: 1;
+            }
+        }
+        
+        .carousel .list .item.active .content .title {
+            animation-delay: 0.7s!important;
+        }
+        
+        .carousel .list .item.active .content .topic {
+            animation-delay: 0.9s!important;
+        }
+        
+        .carousel .list .item.active .content .des {
+            animation-delay: 1.1s!important;
+        }
+        
+        .carousel .time {
+            position: absolute;
+            z-index: 1000;
+            width: 0%;
+            height: 3px;
+            background-color: #f1683a;
+            left: 0;
+            top: 0;
+        }
+        
+        .carousel.next .time,
+        .carousel.prev .time {
+            animation: runningTime 3s linear 1 forwards;
+        }
+        
+        @keyframes runningTime {
+            from { width: 100% }
+            to { width: 0 }
+        }
+        
+        @media screen and (max-width: 678px) {
+            .carousel .list .item .content {
+                padding-right: 0;
+            }
+            .carousel .list .item .content .title {
+                font-size: 30px;
+            }
+            .danger-meter {
+                right: 20px;
+                width: 60px;
+            }
+            .progress-bar {
+                width: 40px;
+                height: 200px;
+            }
+            .danger-percentage {
+                font-size: 18px;
+            }
+            .search-container {
+                width: 250px;
+            }
+            .search-btn {
+                padding: 10px 15px;
+                font-size: 12px;
+            }
+        }
